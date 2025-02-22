@@ -22,6 +22,7 @@ for subdir in os.listdir(dv_dir):
         for file in os.listdir(subdir_path):
             if file.endswith(('.py', '.txt', '.json')):
                 file_path = os.path.join(subdir_path, file)
-                if os.path.getmtime(file_path) > ref_time:
-                    print(file_path)
+                this_time = os.path.getmtime(file_path)
+                if this_time > ref_time:
+                    print(f"{time.strftime("%d.%m.%y %H:%M", time.localtime(this_time))} {file_path.strip("/home/")}")
 
