@@ -4,7 +4,7 @@ from datetime import datetime
 import json
 
 source_dir = os.path.expanduser('~/dv')
-backup_base_dir = os.path.expanduser('~/Documents/backup')
+backup_base_dir = os.path.expanduser('~/Documents/backup/development/')
 backup_dir = os.path.join(backup_base_dir, datetime.now().strftime("%Y%m%d_%H%M%S"))
 json_file = os.path.join(backup_base_dir, 'file_mod_times.json')
 
