@@ -41,6 +41,7 @@ def copy_files_priority(src_folder, dest_folder):
         print("Archive folder not found in source.")
 
 if __name__ == "__main__":
-    source_folder = ""
-    destination_folder = ""
+    source_folder = input("Source folder: ")
+    destination_folder = input("Destination folder: ")
     copy_files_priority(source_folder, destination_folder)
+
