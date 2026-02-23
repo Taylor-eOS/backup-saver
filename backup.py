@@ -26,8 +26,8 @@ for root, dirs, files in os.walk(source_dir):
             files_copied = False
             for file in os.listdir(dir_path):
                 if file.endswith(('.py', '.json', '.txt')):
-                    #if file.startswith('input') or file.startswith('output'):
-                    #    continue
+                    if file.startswith('input') or file.startswith('output'):
+                        continue
                     src_file = os.path.join(dir_path, file)
                     mod_time = os.path.getmtime(src_file)
                     if src_file not in file_mod_times or mod_time > file_mod_times[src_file]:
